@@ -6,9 +6,6 @@ import System.Environment (getArgs)
 seed :: String
 seed = let ds = replicate 60 '-' in ds ++ ('0':ds)
 
-rule90 = [0,1,0,1,1,0,1,0]
-rules = [0,1,0,1,1,0,1,0]
-
 ruleCon '1' = '0'
 ruleCon '0' = '-'
 
@@ -44,9 +41,9 @@ suspense (x:xs) = do
 	threadDelay 50000
 	suspense xs
 
-moon r = suspense . apply r seed
+slowPrint r = suspense . apply r seed
 
 main = do
 	args <- getArgs
 	let xs = take 2 args
-	moon (xs!!0) (read (xs!!1))
+	slowPrint (xs!!0) (read (xs!!1))
