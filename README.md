@@ -4,4 +4,4 @@ This isn't really useful for anything. Even if it were useful to generate CAs fo
 
 Also, when I use this, I always use `curl`. This doesn't really work unless you're viewing it with a monospace font, like in a terminal.
 
-Rules.hs is a library which also allows for using this utility on the command line, and to gradually print the evolutions.
+Rules.hs is a library which also allows for using this utility on the command line, with the `main` function taking arguments of how many lines to print then the rule to use and to gradually printing the evolutions.
